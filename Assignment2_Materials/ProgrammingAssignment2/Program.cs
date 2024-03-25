@@ -33,12 +33,37 @@ namespace ProgrammingAssignment2
 				// and the comment below. You can of
 				// course add more space between the
 				// comments as needed
+				int numbersInputed = 0;
+				int totalOfNumbersInputed = 0;
+				int numberList = GetValue();
+				float average = 0f;
+				
+				
+				// Code Below Loops till it encounters the required printing of -1
+                
+				while (numberList != -1)
+				{
+					numbersInputed++;
+					totalOfNumbersInputed += numberList;
+					numberList = GetValue();
+					
+				}
+				// Code Below uses divison to calculate the average
+				if (numbersInputed > 0)
+				{
+					average = (float)totalOfNumbersInputed / numbersInputed;
+
+				}
+				// prints the amount of numbers inputed and the average
+				Console.WriteLine(numbersInputed + " " + average);
 
 
 
-				// Don't add or modify any code below
-				// this comment
-				input = Console.ReadLine();
+
+
+                // Don't add or modify any code below
+                // this comment
+                input = Console.ReadLine();
 			}
 		}
 
